@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Fun Facts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    #fact {
+      margin: 20px;
+      font-size: 1.2em;
+      color: #444;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Random Fun Facts 🎉</h1>
+  <p id="fact">Click the button to see a fun fact!</p>
+  <button onclick="showFact()">Show Fun Fact</button>
+
+  <script>
+    const facts = [
+      "Bananas are berries, but strawberries are not.",
+      "Honey never spoils. Archaeologists have found edible honey in ancient tombs.",
+      "Octopuses have three hearts and blue blood.",
+      "Sharks existed before trees.",
+      "A day on Venus is longer than a year on Venus.",
+      "Wombat poop is cube-shaped.",
+      "Sloths can hold their breath longer than dolphins."
+    ];
+
+    function showFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById("fact").textContent = facts[randomIndex];
+    }
+  </script>
+</body>
+</html>
